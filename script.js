@@ -38,3 +38,9 @@ btnScrollTo.addEventListener("click", function (e) {
   // Scrolling
   section1.scrollIntoView({ behavior: "smooth" });
 });
+
+// Event Delegation
+document.querySelector(".nav__link").addEventListener("click", function (e) {
+  const id = e.target.getAttribute("href");
+  document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+});
